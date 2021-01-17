@@ -1,0 +1,92 @@
+Evolution of multiple living cells
+
+    Multiple living cells should follow the rules of the game
+    when evolving from one generation to the next
+
+
+    Scenario : A board dotted with living cells that are not staying alive
+    Given the following setup:
+
+    | X || . || . || . || X || . |
+    | . || . || X || . || . || . |
+    | . || . || . || . || X || . |
+    | X || . || . || . || . || . |
+    | . || . || . || . || . || X |
+    | . || X || . || X || . || . |
+
+    When I tell the board to evolve once
+    Then the current board should be like this
+
+    | . || . || . || . || . || . |
+    | . || . || . || . || . || . |
+    | . || . || . || . || . || . |
+    | . || . || . || . || . || . |
+    | . || . || . || . || . || . |
+    | . || . || . || . || . || . |
+
+
+    Scenario : A board with multiple dead cells coming to life
+    Given the following setup:
+
+    | . || . || . || . || . || . |
+    | . || . || . || . || . || . |
+    | . || . || . || . || . || . |
+    | . || . || X || X || X || . |
+    | . || . || . || . || . || . |
+    | . || . || . || . || . || . |
+
+    When I tell the board to evolve once
+    Then the current board should be like this
+
+    | . || . || . || . || . || . |
+    | . || . || . || . || . || . |
+    | . || . || . || X || . || . |
+    | . || . || . || X || . || . |
+    | . || . || . || X || . || . |
+    | . || . || . || . || . || . |
+
+    Scenario : An over-crowded board
+    Given the following setup:
+
+    | . || . || . || . || . || . |
+    | . || X || X || X || X || . |
+    | . || X || X || X || X || . |
+    | . || X || X || X || X || . |
+    | . || . || . || . || . || . |
+    | . || . || . || . || . || . |
+
+    When I tell the board to evolve once
+    Then the current board should be like this
+
+    | . || . || X || X || . || . |
+    | . || X || . || . || X || . |
+    | X || . || . || . || . || X |
+    | . || X || . || . || X || . |
+    | . || . || X || X || . || . |
+    | . || . || . || . || . || . |
+
+
+    Scenario : A board full of living cells
+    Given the following setup:
+
+    | X || X || X || X || X || X |
+    | X || X || X || X || X || X |
+    | X || X || X || X || X || X |
+    | X || X || X || X || X || X |
+    | X || X || X || X || X || X |
+    | X || X || X || X || X || X |
+
+
+    When I tell the board to evolve once
+    Then the current board should be like this
+
+    | X || . || . || . || . || X |
+    | . || . || . || . || . || . |
+    | . || . || . || . || . || . |
+    | . || . || . || . || . || . |
+    | . || . || . || . || . || . |
+    | X || . || . || . || . || X |
+
+
+
+

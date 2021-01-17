@@ -1,0 +1,28 @@
+
+The Game of Life is a game that do not need a player or any input.
+The game is only determined by it's initial state. Once launched,
+the benefit is to look how the game evolve till the end.
+
+Rules:
+The game of life is going in a wolrd that is a 2 dimentional grid or board square
+with no size limits. Every each square of the gird represents a cell, dead or alive.
+
+An evolution, is the new state of each cell: dead or alive.
+
+Every evolution or generation, states of cells may change.
+
+Cells has neighbors. Neighbors are cell adjacent to one cell. It can be horizontally, vertically or diagonally.
+
+To know if a cell is alive or dead:
+
+Any cell with fewer than 2 neighbors dies.
+
+Any cell with 2 or 3 nieghbors live.
+
+Any cell with more than 3 neighbors dies.
+
+Any dead cell with 3 alive neighbors become alive cell.
+
+Every evolution turn is for all the cells on the board at the same time
+Every evolution depends of the previous one.
+The game go on until there is no more evolution possible or when the user stop the game.

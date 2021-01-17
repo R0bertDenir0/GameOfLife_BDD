@@ -1,0 +1,95 @@
+Evolution of an alive cell
+
+    An alive cell should follow the rules of the game
+    when evolving from a generation to the next
+
+    Scenario : A living cell with 0 neighbors
+    given the following setup:
+
+    | . || . || . |
+    | . || X || . |
+    | . || . || . |
+
+    When I tell the cell to evolve once
+    then the center cell should be dead
+
+    Scenario : A living cell with 1 neighbor
+    given the following setup:
+
+    | . || . || . |
+    | X || X || . |
+    | . || . || . |
+
+    When I tell the cell to evolve once
+    then the center cell should be dead
+
+    Scenario : A living cell with 2 neighbors
+    given the following setup:
+
+    | . || X || . |
+    | X || X || . |
+    | . || . || . |
+
+    When I tell the cell to evolve once
+    then the center cell should be alive
+
+    Scenario : A living cell with 3 neighbors
+    given the following setup:
+
+    | . || X || . |
+    | X || X || X |
+    | . || . || . |
+
+    When I tell the cell to evolve once
+    then the center cell should be alive
+
+    Scenario : A living cell with 4 neighbors
+    given the following setup:
+
+    | . || X || . |
+    | . || X || X |
+    | . || X || X |
+
+    When I tell the cell to evolve once
+    then the center cell should be dead
+
+    Scenario : A living cell with 5 neighbors
+    given the following setup:
+
+    | . || X || . |
+    | . || X || X |
+    | X || X || X |
+
+    When I tell the cell to evolve once
+    then the center cell should be dead
+
+    Scenario : A living cell with 6 neighbors
+    given the following setup:
+
+    | X || X || . |
+    | . || X || X |
+    | X || X || X |
+
+    When I tell the cell to evolve once
+    then the center cell should be dead
+
+    Scenario : A living cell with 7 neighbors
+    given the following setup:
+
+    | X || X || . |
+    | X || X || X |
+    | X || X || X |
+
+    When I tell the cell to evolve once
+    then the center cell should be dead
+
+    Scenario : A living cell with 8 neighbors
+    given the following setup:
+
+    | X || X || X |
+    | X || X || X |
+    | X || X || X |
+
+    When I tell the cell to evolve once
+    then the center cell should be dead
+

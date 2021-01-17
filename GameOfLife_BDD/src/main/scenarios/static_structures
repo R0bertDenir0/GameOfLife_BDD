@@ -1,0 +1,68 @@
+Static structures
+
+    Multiple cells should all follow the rules of the game
+    when evolving through multiple steps. These
+    scenarios all result in generations that do not change
+    after evolution.
+
+  Scenario: Block
+      Given the following setup
+        | . || . || . || . || . |
+        | . || x || x || . || . |
+        | . || x || x || . || . |
+        | . || . || . || . || . |
+        | . || . || . || . || . |
+      When I evolve the board
+      Then I should see the following board
+        | . || . || . || . || . |
+        | . || x || x || . || . |
+        | . || x || x || . || . |
+        | . || . || . || . || . |
+        | . || . || . || . || . |
+
+    Scenario: Beehive
+      Given the following setup
+        | . || . || . || . || . |
+        | . || . || x || x || . |
+        | . || x || . || . || x |
+        | . || . || x || x || . |
+        | . || . || . || . || . |
+      When I evolve the board
+      Then I should see the following board
+        | . || . || . || . || . |
+        | . || . || x || x || . |
+        | . || x || . || . || x |
+        | . || . || x || x || . |
+        | . || . || . || . || . |
+
+    Scenario: Loaf
+      Given the following setup
+        | . || . || . || . || . || . |
+        | . || . || x || x || . || . |
+        | . || x || . || . || x || . |
+        | . || . || x || . || x || . |
+        | . || . || . || x || . || . |
+        | . || . || . || . || . || . |
+      When I evolve the board
+      Then I should see the following board
+        | . || . || . || . || . || . ||
+        | . || . || x || x || . || . ||
+        | . || x || . || . || x || . ||
+        | . || . || x || . || x || . ||
+        | . || . || . || x || . || . ||
+        | . || . || . || . || . || . ||
+
+    Scenario: Boat
+      Given the following setup
+        | . || . || . || . || . |
+        | . || x || x || . || . |
+        | . || x || . || x || . |
+        | . || . || x || . || . |
+        | . || . || . || . || . |
+      When I evolve the board
+      Then I should see the following board
+        | . || . || . || . || . |
+        | . || x || x || . || . |
+        | . || x || . || x || . |
+        | . || . || x || . || . |
+        | . || . || . || . || . |

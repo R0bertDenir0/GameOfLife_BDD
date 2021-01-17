@@ -1,0 +1,100 @@
+Evolution of a dead cell
+
+    A dead cell should follow the rules of the game
+    when evolving from a generation to the next
+
+    Scenario: A dead cell with 0 neighbors stays dead
+    Given the following setup :
+
+    | . || . || . |
+    | . || . || . |
+    | . || . || . |
+
+    When I tell the cell to evolve once
+    then the center cell should be dead
+
+    Scenario: A dead cell with 1 neighbor stays dead
+    Given the following setup :
+
+    | . || . || . |
+    | . || . || . |
+    | . || . || . |
+
+    When I tell the cell to evolve once
+    then the center cell should be dead
+
+    Scenario: A dead cell with 2 neighbors stays dead
+    Given the following setup :
+
+    | . || X || . |
+    | X || . || . |
+    | . || . || . |
+
+    When I tell the cell to evolve once
+    then the center cell should be dead
+
+    Scenario: A dead cell with 3 neighbors comes to life
+    Given the following setup :
+
+    | . || X || X |
+    | X || . || . |
+    | . || . || . |
+
+    When I tell the cell to evolve once
+    then the center cell should become alive
+
+    Scenario: A dead cell with 4 neighbors stays dead
+    Given the following setup :
+
+    | X || X || X |
+    | X || . || . |
+    | . || . || . |
+
+    When I tell the cell to evolve once
+    then the center cell should be dead
+
+    Scenario: A dead cell with 5 neighbors stays dead
+    Given the following setup :
+
+    | X || X || X |
+    | X || . || X |
+    | . || . || . |
+
+    When I tell the cell to evolve once
+    then the center cell should be dead
+
+    Scenario: A dead cell with 6 neighbors stays dead
+    Given the following setup :
+
+    | X || X || X |
+    | X || . || X |
+    | X || . || . |
+
+    When I tell the cell to evolve once
+    then the center cell should be dead
+
+    Scenario: A dead cell with 7 neighbors stays dead
+    Given the following setup :
+
+    | X || X || X |
+    | X || . || X |
+    | X || X || . |
+
+    When I tell the cell to evolve once
+    then the center cell should be dead
+
+    Scenario: A dead cell with 8 neighbors stays dead
+    Given the following setup :
+
+    | X || X || X |
+    | X || . || X |
+    | X || X || X |
+
+    When I tell the cell to evolve once
+    then the center cell should be dead
+
+
+
+
+
+

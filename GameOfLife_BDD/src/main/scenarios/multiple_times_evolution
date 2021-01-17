@@ -1,0 +1,34 @@
+multiple times evolution of cells
+
+    Multiple cells should all follow the rules of the game
+    when evolving through several steps
+
+    Scenario: Multiples cells come alive and  then die
+    Given the following setup:
+
+    | . || . || . || . || . || . |
+    | . || . || . || . || . || . |
+    | . || . || . || . || . || . |
+    | . || . || X || X || X || . |
+    | . || . || . || . || . || . |
+    | . || . || . || . || . || . |
+
+    When I tell to my board to evolve once
+    then the board should look like this
+
+    | . || . || . || . || . || . |
+    | . || . || . || . || . || . |
+    | . || . || . || X || . || . |
+    | . || . || . || X || . || . |
+    | . || . || . || X || . || . |
+    | . || . || . || . || . || . |
+
+    When I tell to my board to evolve once
+    then the board should look like this
+
+    | . || . || . || . || . || . |
+    | . || . || . || . || . || . |
+    | . || . || . || . || . || . |
+    | . || . || . || . || . || . |
+    | . || . || . || . || . || . |
+    | . || . || . || . || . || . |
